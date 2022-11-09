@@ -1,0 +1,7 @@
+FROM registry.access.redhat.com/ubi8/ubi:latest
+
+RUN yum install -y rust-toolset
+
+FROM rust:1.62.1 AS rust-builder
+
+RUN rustc --version
